@@ -1,5 +1,5 @@
-# Title of your project
+# THREE.js Earth scene
 
-Description of your project.
+Watch the tutorial on [YouTube](https://youtu.be/FntV9iEJ0tU)
 
-[website](https://www.yoururl.nl)
+Earth texture maps: [PlanetPixelEmporium](https://planetpixelemporium.com/earth.html)
