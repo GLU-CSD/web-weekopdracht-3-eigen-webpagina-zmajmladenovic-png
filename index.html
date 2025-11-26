@@ -124,6 +124,7 @@
   <audio id="heaven" src="heaven.mp3"></audio>
   <audio id="audio3" src="gold.mp3"></audio>
   <audio id="audio4" src="crimsonSkip.mp3"></audio>
+  <audio id="audio5" src="skipTime.mp3"></audio>
   <div id="button" onclick="playAudio();">The World!</div>
   <div id="button2" onclick="playAudio2();">HEAVEN</div>
   <div id="button3" onclick="playAudio3();">GER</div>
@@ -132,6 +133,7 @@
   <script>
     const audio = document.getElementById('audio');
     const heaven = document.getElementById('heaven');
+    const audio4 = document.getElementById('audio4')
 
     let earthSpinning = true;
     let madeinheaven = false;
@@ -148,6 +150,9 @@
       console.log("stop de aarde met draaien");
       earthSpinning = false;
           skipK = false;
+          heaven.pause(); 
+          audio5.pause(); 
+          audio4.pause();
       setTimeout(()=>{earthSpinning = true; rotationSPeed = 0.001; audio2.play();madeinheaven = false; gold1 = false; skipK = false;   skip2 = true;},5000);
     });
 
@@ -157,7 +162,6 @@
     audio.pause();
     audio2.pause();
     gold1 = false;
-     skipK = false;   skip2 = true;
     }
     function playAudio3() { //works
     audio.pause();
@@ -166,12 +170,14 @@
     gold1 = true;
     madeinheaven = false;
     heaven.pause();
-     skipK = false;   skip2 = true;
     }
     function playAudio4() {
     audio4.play();
+    audio4.addEventListener("ended", (event) => {
     skipK = true;
     skip2 = false;
+    audio5.play();
+    });
     }
   </script>
   <script type="module" src="index.js"></script>

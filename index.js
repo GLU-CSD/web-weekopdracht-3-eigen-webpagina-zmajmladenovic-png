@@ -81,8 +81,8 @@ function animate() {
   }
   else if (gold1) {
     rotationSPeed = rotationSPeed - 0.0001;
-  } else if (skipK){
-if (skip2 == false){ 
+  } else if (skipK && earthSpinning == true){
+if (skip2 == false && earthSpinning == true ){ 
 earthMesh.rotation.y += 0.5
 lightsMesh.rotation.y += 0.5
 cloudsMesh.rotation.y += 0.23
