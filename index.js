@@ -100,10 +100,10 @@ skip2 = true
   else {
     rotationSPeed = 0.001;
   }
+ //fixed
 
 
-
-
+//ee
 
   renderer.render(scene, camera);
 
