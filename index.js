@@ -68,7 +68,6 @@ let rotationSPeed = 0.001;
 
 function animate() {
   requestAnimationFrame(animate);
-  //rotationSPeed = rotationSPeed + 0.0001;   USE LATER
   if (earthSpinning) {
     earthMesh.rotation.y += 0.002 + rotationSPeed;
     lightsMesh.rotation.y += 0.002 + rotationSPeed;
@@ -82,14 +81,29 @@ function animate() {
   }
   else if (gold1) {
     rotationSPeed = rotationSPeed - 0.0001;
+  } else if (skipK){
+if (skip2 == false){ 
+earthMesh.rotation.y += 0.5
+lightsMesh.rotation.y += 0.5
+cloudsMesh.rotation.y += 0.23
+glowMesh.rotation.y += 0.5
+stars.rotation.y += 2
+console.log(earthMesh.rotation.y)
+skip2 = true
+}
+  earthMesh.rotation.y += 0.002 + rotationSPeed;
+  lightsMesh.rotation.y += 0.002 + rotationSPeed;
+  cloudsMesh.rotation.y += 0.0023 + rotationSPeed;
+  glowMesh.rotation.y += 0.002 + rotationSPeed;
+  stars.rotation.y -= 0.0002 + rotationSPeed;
   }
   else {
     rotationSPeed = 0.001;
   }
 
-  if (gold1) {
-    rotationSPeed = rotationSPeed - 0.0001;
-  }
+
+
+
 
   renderer.render(scene, camera);
 
