@@ -100,10 +100,20 @@ skip2 = true
   else {
     rotationSPeed = 0.001;
   }
- //fixed
 
-
-//ee
+if (jamiroquai && earthSpinning == true){
+  earthMesh.rotation.x -= 0.002 + rotationSPeed;
+  lightsMesh.rotation.y += 0.002 + rotationSPeed;
+  cloudsMesh.rotation.x += 0.0023 + rotationSPeed;
+  glowMesh.rotation.y -= 0.002 + rotationSPeed;
+  stars.rotation.x += 0.0002 + rotationSPeed;
+  earthMesh.rotation.y += 0.02 + rotationSPeed;
+  lightsMesh.rotation.y += 0.02 + rotationSPeed;
+  cloudsMesh.rotation.y += 0.023 + rotationSPeed;
+  glowMesh.rotation.y += 0.02 + rotationSPeed;
+  stars.rotation.y -= 0.002 + rotationSPeed;
+  camera.rotation.z += 0.02 + rotationSPeed;
+}
 
   renderer.render(scene, camera);
 
