@@ -113,6 +113,7 @@ if (jamiroquai && earthSpinning == true){
   glowMesh.rotation.y += 0.02 + rotationSPeed;
   stars.rotation.y -= 0.002 + rotationSPeed;
   camera.rotation.z += 0.02 + rotationSPeed;
+   earthMesh.rotation.z += 0.02 + rotationSPeed;
 }
 
   renderer.render(scene, camera);
